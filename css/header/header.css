@@ -1,0 +1,17 @@
+.header-sidebar {
+    --state-close: scale(0);
+    --state-menu:scale(1);
+    --state-sidebar: translate(-110%);
+}
+
+.header-sidebar:target {
+    --state-close: scale(1);
+    --state-menu: scale(0);
+    --state-sidebar: translate(0);
+}
+
+@media screen and (1024px <= width) {
+    .header-sidebar {
+        --state-sidebar: translate(0);
+    }
+}
