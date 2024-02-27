@@ -5,7 +5,7 @@ export default function callApiAirPollution(data) {
     // Se guardan las coordenadas del JSON, para poder hacer otra llamada a una API para conocer la calidad del aire en esa ciudad
     const { coord: { lon, lat } } = data;
     const apiKey = "283b0af63e8ca8a200b89d9a1a45e99a";
-    const url = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+    const url = `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${apiKey}`;
 
     fetch(url)
         .then(data => {
