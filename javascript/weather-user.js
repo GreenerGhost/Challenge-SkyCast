@@ -22,4 +22,7 @@ export default function callApiWeatherUser(lat, lon) {
                 callApiAirPollution(dataJSON);
             };
         })
+        .catch(function (error) {
+            console.log(`Hubo un problema con la petición de fetch ${error}`);
+        })
 };
