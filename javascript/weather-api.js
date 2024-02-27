@@ -23,6 +23,9 @@ export default function callApiWeather(city, country) {
                 callApiAirPollution(dataJSON);
             };
         })
+        .catch(function (error) {
+            console.log(`Hubo un problema con la petición de fetch ${error}`);
+        })
 };
 
 
