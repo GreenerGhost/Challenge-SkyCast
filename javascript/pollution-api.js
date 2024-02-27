@@ -21,4 +21,7 @@ export default function callApiAirPollution(data) {
                 showWeather(data, aqi);
             }
         })
+        .catch(function (error) {
+            console.log(`Hubo un problema con la petición de fetch ${error}`);
+        })
 };
